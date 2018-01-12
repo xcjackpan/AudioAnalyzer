@@ -202,7 +202,7 @@ file.onchange = function() {
 
 			for (var i = 0; i < endpoints; i++) {
 				lineY = dataArray[i];
-				canvasContext.lineTo(x, cHeight - lineY * 2.3);
+				canvasContext.lineTo(x, 50 + cHeight - lineY * 2.3);
 
 				x += 8;
 			}
