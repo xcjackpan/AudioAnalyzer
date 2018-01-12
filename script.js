@@ -183,10 +183,10 @@ file.onchange = function() {
 		canvasContext.fillRect(0, 0, cWidth, cHeight);
 
 		if (pulseB) {
-			for (var i = 0; i < 64; i += 4) {
+			for (var i = 0; i < 64; i += 6) {
 				radius = dataArray[i];
 
-				var r = 25 * (i/2);
+				var r = 25 * (i/3);
 				var g = 50;
 				var b = 50 * (radius/2);
 
