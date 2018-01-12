@@ -9,10 +9,71 @@
 	overflow: hidden;
 }
 
-#audio-file {
+#panel {
 	top: 1%;
-	left: 0.2%;
-	position: fixed;
+	left: 0.5%;
+	position: absolute;
+	font-size: 18px;
+	font-family: Raleway;
+	color: #333333;
+	display: block;
+}
+
+#panel 	{
+	top: 1%;
+	left: 0.5%;
+	position: absolute;
+	font-size: 18px;
+	font-family: Raleway;
+	color: #333333;
+	display: block;
+}
+
+#panel hr {
+	clear: both;
+	display: block;
+	height: 2px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin-top: 6%;
+}
+
+#panel label {
+	display: block;
+}
+
+.light label:hover {
+	color: black;
+	cursor: pointer;
+}
+
+.dark label:hover {
+	color: white;
+	cursor: pointer;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#type {
+	clear: both;
+	position: absolute;
+	margin-top: 6%;
+}
+
+#type li {
+	display: none;
+}
+
+#color {
+	clear: both;
+	position: absolute;
+	margin-top: 100%;
+}
+
+#color li {
+	display: none;
 }
 
 #audio-controls {
