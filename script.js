@@ -183,14 +183,14 @@ file.onchange = function() {
 		canvasContext.fillRect(0, 0, cWidth, cHeight);
 
 		if (pulseB) {
-			for (var i = 0; i < 64; i += 6) {
+			for (var i = 0; i < 64; i += 4) {
 				radius = dataArray[i];
 
-				var r = 25 * (i/3);
+				var r = 15 * (i/4);
 				var g = 50;
 				var b = 50 * (radius/2);
 
-				canvasContext.globalAlpha = 0.5;
+				canvasContext.globalAlpha = 0.4;
 				canvasContext.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
 				canvasContext.beginPath();
 				canvasContext.arc(cWidth * 0.5, cHeight * 0.5, radius*2, 0, 2 * Math.PI, false);
