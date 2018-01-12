@@ -216,7 +216,7 @@ file.onchange = function() {
 				barHeight = dataArray[i] ^ 1.5;
 
 				var r = barHeight + (25 * (i/bars));
-				var g = 250 * (i/bars);
+				var g = (250 * (i/bars))^0.25;
 				var b = 50;
 
 				canvasContext.globalAlpha = 1;
