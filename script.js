@@ -62,10 +62,10 @@ function lightF() {
 	if (darkB) {
 		document.getElementById("panel").classList.remove("dark");
 		document.getElementById("panel").classList.add("light");
+		reset();
 	}
 	lightB = true;
 	darkB = false;
-	reset();
 }
 
 function darkF() {
@@ -75,10 +75,10 @@ function darkF() {
 	if (lightB) {
 		document.getElementById("panel").classList.remove("light");
 		document.getElementById("panel").classList.add("dark");
+		reset();
 	}
 	lightB = false;
 	darkB = true;
-	reset();
 }
 
 function reset() {
