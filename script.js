@@ -230,10 +230,6 @@ file.onchange = function() {
 			for (var i = 0; i < bars; i++) {
 				dotHeight = dataArray[i] ^ 1.15;
 
-				var r = dotHeight + (25 * (i/dots));
-				var g = 250 * (i/dots);
-				var b = 50;
-
 				canvasContext.globalAlpha = 1;
 				canvasContext.fillStyle = drawColor;
 				canvasContext.fillRect(x, cHeight - 2.0 * dotHeight, dotWidth, 2);
