@@ -26,21 +26,18 @@
 	font-size: 18px;
 	font-family: Raleway;
 	color: #333333;
-	display: block;
 }
 
-#l1 {
+#l-one {
 	clear: both;
-	display: block;
 	height: 2px;
 	border: 0;
 	border-top: 1px solid #ccc;
 	margin-top: 6%;
 }
 
-#l2 {
+#l-two {
 	clear: both;
-	display: block;
 	height: 2px;
 	border: 0;
 	border-top: 1px solid #ccc;
@@ -49,6 +46,7 @@
 
 #panel label {
 	display: block;
+	width: auto;
 }
 
 .light label:hover {
