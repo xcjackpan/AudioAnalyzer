@@ -186,9 +186,9 @@ file.onchange = function() {
 			for (var i = 0; i < 64; i += 4) {
 				radius = dataArray[i];
 
-				var r = 15 * (i/4);
+				var r = 15 * (i/3);
 				var g = 50;
-				var b = 50 * (radius/2);
+				var b = 80 * (radius/2);
 
 				canvasContext.globalAlpha = 0.4;
 				canvasContext.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
