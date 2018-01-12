@@ -215,7 +215,7 @@ file.onchange = function() {
 			for (var i = 0; i < bars; i++) {
 				barHeight = dataArray[i] ^ 1.5;
 
-				var r = barHeight + (25 * (i/bars));
+				var r = barHeight + (30 * (i/bars));
 				var g = (250 * (i/bars))^0.25;
 				var b = 50;
 
