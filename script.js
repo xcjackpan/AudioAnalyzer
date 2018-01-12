@@ -63,7 +63,9 @@ function lightF() {
 		document.getElementById("panel").classList.remove("dark");
 		document.getElementById("panel").classList.add("light");
 	}
-	lightF = true;
+	lightB = true;
+	darkB = false;
+	reset();
 }
 
 function darkF() {
@@ -74,7 +76,18 @@ function darkF() {
 		document.getElementById("panel").classList.remove("light");
 		document.getElementById("panel").classList.add("dark");
 	}
-	darkF = false;
+	lightB = false;
+	darkB = true;
+	reset();
+}
+
+function reset() {
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
+	cWidth = canvas.width;
+	cHeight = canvas.height;
+	canvasContext.fillStyle = bgColor;
+	canvasContext.fillRect(0, 0, cWidth, cHeight);
 }
 
 function pulseF() {
@@ -95,15 +108,6 @@ function lineF() {
 	console.log('line');
 }
 
-function dotF() {
-	pulseB = false;
-	lineB = false;
-	dotB = true;
-	barB = false;
-	analyser.fftSize = 2048;
-	console.log('dot');
-}
-
 function barF() {
 	pulseB = false;
 	lineB = false;
@@ -111,6 +115,15 @@ function barF() {
 	barB = true;
 	analyser.fftSize = 1024;
 	console.log('bar');
+}
+
+function dotF() {
+	pulseB = false;
+	lineB = false;
+	dotB = true;
+	barB = false;
+	analyser.fftSize = 2048;
+	console.log('dot');
 }
 
 file.onchange = function() {
@@ -185,7 +198,7 @@ file.onchange = function() {
 			}
 		} else if (lineB) {
 			canvasContext.beginPath();
-			canvasContext.moveTo(-10, cHeight - (cHeight * 0.2));
+			canvasContext.moveTo(-30, cHeight - (cHeight * 0.2));
 
 			for (var i = 0; i < endpoints; i++) {
 				lineY = dataArray[i];
@@ -194,6 +207,7 @@ file.onchange = function() {
 				x += 8;
 			}
 
+			canvasContext.globalAlpha = 1;
 			canvasContext.lineWidth = 3;
 			canvasContext.strokeStyle = drawColor;
 			canvasContext.stroke();
@@ -205,7 +219,7 @@ file.onchange = function() {
 				var g = 250 * (i/bars);
 				var b = 50;
 
-				canvasContext.globalAlpha = 0.5;
+				canvasContext.globalAlpha = 1;
 				canvasContext.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
 				canvasContext.fillRect(x, cHeight - 2.0 * barHeight, barWidth, 2.8 * barHeight);
 
@@ -220,7 +234,7 @@ file.onchange = function() {
 				var g = 250 * (i/dots);
 				var b = 50;
 
-				canvasContext.globalAlpha = 0.5;
+				canvasContext.globalAlpha = 1;
 				canvasContext.fillStyle = drawColor;
 				canvasContext.fillRect(x, cHeight - 2.0 * dotHeight, dotWidth, 2);
 

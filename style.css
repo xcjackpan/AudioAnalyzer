@@ -29,13 +29,22 @@
 	display: block;
 }
 
-#panel hr {
+#l1 {
 	clear: both;
 	display: block;
 	height: 2px;
 	border: 0;
 	border-top: 1px solid #ccc;
 	margin-top: 6%;
+}
+
+#l2 {
+	clear: both;
+	display: block;
+	height: 2px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin-top: 75%;
 }
 
 #panel label {
@@ -59,7 +68,6 @@ input[type="file"] {
 #type {
 	clear: both;
 	position: absolute;
-	margin-top: 6%;
 }
 
 #type li {
@@ -69,7 +77,7 @@ input[type="file"] {
 #color {
 	clear: both;
 	position: absolute;
-	margin-top: 100%;
+	margin-top: 3%;
 }
 
 #color li {
